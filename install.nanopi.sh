@@ -1,8 +1,8 @@
 #!/bin/bash
 clear
 
-echo EiaB \(Echolink in a Box by ZS6JPG\):: Installation Script for NanoPi
-echo ---------------------------------------------------------------------
+echo EiaB \(Echolink in a Box by ZS6JPG\):: Installation Script for NanoPi & Ubuntu
+echo ------------------------------------------------------------------------------
 
 source /etc/lsb-release
 ARCH=$(uname -m)
@@ -63,6 +63,7 @@ cp ./files/etc/pdmenurc /etc/pdmenurc
 echo Adding echolink user
 useradd -m -d echolink
 usermod -aG sudo echolink 
+echo "echolink:echolinkinabox" | chpasswd
 
 echo Setting up user "echolink\'s" shell
 chmod +x /etc/pdmenurc
@@ -75,7 +76,5 @@ ln -f /etc/pdmenurc /usr/bin/eiab-shell
 
 echo
 echo
-echo Run eiab-setup to continue . . .
-#/usr/share/eiab/scripts/setup.sh
-#pdmenu --color /usr/share/eiab/scripts/setup.sh
-
+echo Run $(tput setaf 6)eiab-setup$(tput sgr 0) to continue . . .
+echo
