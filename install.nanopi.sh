@@ -6,12 +6,12 @@ ARCH=$(uname -m)
 
 if [$DISTRIB_ID != "Ubuntu"]
     echo FAILURE: Expected Ubuntu, got $DISTRIB_ID 
-    break;
+    exit 1
 fi
 
 if [$ARCH != "armv7l"]
     echo FAILURE: Expected armv7l, got $ARCH 
-    break;
+    exit 1
 fi
 
 REQUIRED_PKG_GIT="git"
