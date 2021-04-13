@@ -11,6 +11,9 @@ color:base:blue:white
 # Define the main menu.
 menu:main:---EchoLink in a Box by ZS6JGP---
         nop
+        exec:_Update Core System:edit,pause:sudo apt update
+        exec:_Upgrade Core System:edit,pause:sudo apt upgrade
+        nop
         exec:Install _Dependencies:edit,pause:/usr/share/eiab/scripts/install.dependencies.sh
         show:Install _SvxLink::network
         nop
