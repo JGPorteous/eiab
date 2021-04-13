@@ -56,6 +56,7 @@ echo
 
 cd /usr/share/eiab/
 chmod +x ./scripts/*.sh
-./scripts/setup.sh
+bash -k ./scripts/setup.sh
 
-#pdmenu --color /usr/share/eiab/scripts/pdsetup
+#bash -c 'pdmenu --color /usr/share/eiab/scripts/pdsetup'
+
