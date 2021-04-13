@@ -34,7 +34,7 @@ echo ------------------
 sudo make install
 sudo ldconfig
 
-echo Setup & Enable Services
+echo Setup \& Enable Services
 echo -----------------------
 systemctl enable svxlink_gpio_setup
 systemctl enable svxlink

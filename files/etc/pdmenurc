@@ -30,13 +30,13 @@ menu:services:Services Menu:Services Menu
         exec:_Stop SvxLink:truncate:sudo service svxlink stop&& echo Stopped Service
         exec:_Start SvxLink:truncate:sudo service svxlink start&& echo Started Service
         exec:_Restart SvxLink:truncate:sudo service svxlink restart&& echo Restarted Service
-
         nop
         exit:_Main menu..
 
 menu:logs:logs:Log Menu
         exec:_View SvxLink Log:edit:lnav /var/log/svxlink -c ':goto -20'
         exec:_Dmesg Logs::dmesg --color=always | less +G -r
+#TODO:Doesn'tw work on Raspberry PI
         exec:_View Network Time Log:edit:lnav /var/log/sync_ntp_rtc.log  -c ':goto -20'
         nop
         exit:_Main menu..
