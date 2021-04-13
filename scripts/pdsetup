@@ -11,76 +11,12 @@ color:base:blue:white
 # Define the main menu.
 menu:main:---EchoLink in a Box by ZS6JGP---
         nop
-        exec:Install _Dependencies::./scripts install.dependencies.sh
-        show:_Network Tools::network
-        show:_Logs::logs
+        exec:Install _Dependencies:edit,pause:/usr/share/eiab/scripts/install.dependencies.sh
+        show:Install _SvxLink::network
         nop
-        show:_Configuration::configuration
-        show:_Operating System::os
-        show:_Advanced Menu::advanced
-        nop
-        #exec:_test:edit,pause:echo ~var one? ~var two:~
-        #nop
         exec:System _Info:edit,display:echo "\n" | cat /var/run/motd.dynamic  | sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g'
         exec:CPU _Temperature:truncate:echo CPU: $((`cat /sys/class/thermal/thermal_zone0/temp` / 1000)) Degrees
         nop
-        exit:_Exit
-
-menu:services:Services Menu:Services Menu
-        exec:_Stop SvxLink:truncate:sudo service svxlink stop&& echo Stopped Service
-        exec:_Start SvxLink:truncate:sudo service svxlink start&& echo Started Service
-        exec:_Restart SvxLink:truncate:sudo service svxlink restart&& echo Restarted Service
-
-        nop
-        exit:_Main menu..
-
-menu:logs:logs:Log Menu
-        exec:_View SvxLink Log:edit:lnav /var/log/svxlink -c ':goto -20'
-        exec:_Dmesg Logs::dmesg --color=always | less +G -r
-        exec:_View Network Time Log:edit:lnav /var/log/sync_ntp_rtc.log  -c ':goto -20'
-        nop
-        exit:_Main menu..
-
-menu:configuration:Configuration:Configuration
-        exec:_SvxLink::sudo nano /etc/svxlink/svxlink.conf
-        exec:_GPIO::sudo nano /etc/svxlink/gpio.conf
-        exec:_EchoLink Module::sudo nano /etc/svxlink/svxlink.d/ModuleEchoLink.conf
-        nop
-        exit:_Main menu..
-
-menu:network:Network Tools:Network Tools
-        exec:_View IP Settings:truncate:ifconfig
-        exec:_Finger:edit,display:finger ~Enter address to finger:~ 2>/dev/null
-        exec:_Ping:edit,display:ping -c 3 ~Enter address to ping:~ 2>/dev/null
-        exec:_Telnet:edit,pause:telnet ~Telnet to where?:~
-        exec:_SSH:edit,pause:ssh ~SSH to where?:~
-        #exec:_News::slrn -C -n
-        #exec:_WWW::lynx http://www.svxlink.com/
-        #exec:_Talk:edit,pause:ytalk -x ~Talk to who?:joey~
-        nop
-        exit:_Main menu..
-
-menu:os:OS Settings:OS Settings
-        exec:_Disk Space:edit,pause:sudo df -h
-        nop
-        exec:_APT Sources::sudo nano /etc/apt/sources.list
-        exec:_APT Update::sudo apt update
-        exec:_APT Upgrade::sudo apt upgrade
-        nop
-        exit:_Main menu..
-
-menu:advanced:Advanced Menu:Advanced Menu
-        exec:_Bash::bash
-        exec:_Process Viewer (htop)::htop
-        nop
-        exec:_Change your password:pause:passwd
-        exec:_Who's online?:truncate:echo "These users are online:";w
-        #exec:_Change directory:edit,set:echo PWD=~set to?:~
-        #exec:_Directory listing:truncate:ls -l
-        exec:_SSH Keys (echolink):truncate:cat  /home/echolink/.ssh/authorized_keys
-        nop
-        exec:_OS Update::apt update & apt upgrade
-        nop
         exec:_Reboot System::sudo reboot
         nop
-        exit:_Main menu..
+        exit:_Exit
