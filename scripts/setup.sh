@@ -9,7 +9,7 @@ color:title:blue:white
 color:base:blue:white
 
 # Define the main menu.
-menu:main:---EchoLink in a Box by ZS6JGP---
+menu:main:---EchoLink in a Box by ZS6JGP - Setup Menu---
         nop
         exec:System (APT) U_pdate:edit,pause:sudo apt update
         exec:System (APT) Up_grade:edit,pause:sudo apt upgrade

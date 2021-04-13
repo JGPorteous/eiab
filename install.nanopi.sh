@@ -57,4 +57,22 @@ echo
 cd /usr/share/eiab/
 chmod +x ./scripts/*.sh
 
-/usr/share/eiab/scripts/setup.sh
+echo Applying Menu
+cp ./files/etc/pdmenurc /etc/pdmenurc
+
+echo Adding echolink user
+useradd -m -d echolink
+usermod -aG sudo echolink 
+
+echo Setting up user "echolink\'s" shell
+chmod +x /etc/pdmenurc
+usermod echolink --shell /etc/pdmenurc 
+
+echo Setting up commands
+ln /usr/share/eiab/scripts/setup.sh /usr/bin/eiab-setup
+
+echo
+echo
+echo Run eiab-setup to continue . . .
+#/usr/share/eiab/scripts/setup.sh
+pdmenu --color /usr/share/eiab/scripts/setup.sh
