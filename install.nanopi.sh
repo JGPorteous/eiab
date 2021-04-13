@@ -71,6 +71,7 @@ usermod echolink --shell /etc/pdmenurc
 echo Setting up commands
 ln -f /usr/share/eiab/scripts/setup.sh /usr/bin/eiab-setup
 ln -f /usr/share/eiab/scripts/help.sh /usr/bin/eiab-help
+ln -f /usr/share/eiab/scripts/shell.sh /etc/pdmenurc
 
 echo
 echo

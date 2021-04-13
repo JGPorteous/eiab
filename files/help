@@ -6,5 +6,11 @@ Available commands
 eiab-setup 
     - Setup, Reinstall and Update your System
 
+eiab-shell
+    - Management Shell
+     
+eiab-help
+    -Help on available commands
+
 More info available at https://github.com/JGPorteous/Echolink-In-A-Box/
 
