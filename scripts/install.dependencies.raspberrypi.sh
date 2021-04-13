@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo Dependencies Installation
+echo Dependencies Installation for Rasperry Pi running Raspbian
 
 apt -y install software-properties-common htop unzip
 apt -y install make cmake groff gzip doxygen tar git 
