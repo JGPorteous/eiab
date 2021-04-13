@@ -76,4 +76,5 @@ echo
 echo
 echo Run eiab-setup to continue . . .
 #/usr/share/eiab/scripts/setup.sh
-pdmenu --color /usr/share/eiab/scripts/setup.sh
+#pdmenu --color /usr/share/eiab/scripts/setup.sh
+
