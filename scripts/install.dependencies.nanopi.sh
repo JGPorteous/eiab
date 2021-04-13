@@ -1,6 +1,8 @@
 #!/bin/bash
 
 echo Dependencies Installation for NanoPi running Ubuntu
+echo ---------------------------------------------------
+echo 
 
 apt -y install software-properties-common htop unzip
 apt -y install make cmake groff gzip doxygen tar git 
