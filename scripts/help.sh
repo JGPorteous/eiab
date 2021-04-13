@@ -1,7 +1,8 @@
 #!/bin/bash
+echo
 echo EchoLink in a Box by ZS6JGP
 echo ---------------------------
-
+echo
 echo Available commands:
 echo 
 echo $(tput setaf 6)eiab-setup $(tput sgr 0)

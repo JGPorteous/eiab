@@ -1,13 +1,13 @@
 #!/bin/bash
 clear
 
-echo EiaB \(Echolink in a Box by ZS6JPG\):: Installation Script for NanoPi & Ubuntu
-echo ------------------------------------------------------------------------------
+echo EiaB \(Echolink in a Box by ZS6JPG\):: Installation Script for Rasperry Pi
+echo --------------------------------------------------------------------------
 
-source /etc/lsb-release
+source /etc/*release*
 ARCH=$(uname -m)
 
-if [ "$DISTRIB_ID" != "Ubuntu" ]
+if [ "$NAME" != "Raspbian GNU/Linux" ]
 then
     echo FAILURE: Expected Ubuntu as OS, got $DISTRIB_ID
     exit 1
@@ -61,7 +61,7 @@ echo Applying Menu
 cp ./files/etc/pdmenurc /etc/pdmenurc
 
 echo Customizing Script
-mv /usr/share/eiab/scripts/install.dependencies.nanopi.sh /usr/share/eiab/scripts/install.dependencies.sh
+mv /usr/share/eiab/scripts/install.dependencies.raspberrypi.sh /usr/share/eiab/scripts/install.dependencies.sh
 
 echo Adding echolink user
 useradd -m -d echolink
