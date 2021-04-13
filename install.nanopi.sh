@@ -55,8 +55,5 @@ git clone https://github.com/JGPorteous/Echolink-In-A-Box.git /usr/share/eiab/
 echo
 
 cd /usr/share/eiab/
-chmod +x ./setup.sh
 chmod +x ./scripts/*.sh
-./setup.sh
-
-pwd
+pdmenu --color /usr/share/eiab/scripts/pdsetup
