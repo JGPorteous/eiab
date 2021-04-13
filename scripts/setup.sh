@@ -11,8 +11,9 @@ color:base:blue:white
 # Define the main menu.
 menu:main:---EchoLink in a Box by ZS6JGP - Setup Menu---
         nop
-        exec:System (APT) U_pdate:edit,pause:sudo apt update
-        exec:System (APT) Up_grade:edit,pause:sudo apt upgrade
+        exec:APT _Sources::sudo nano /etc/apt/sources.list
+        exec:APT U_pdate::sudo apt update
+        exec:APT Up_grade::sudo apt upgrade
         nop
         exec:Install _Dependencies:edit,pause:/usr/share/eiab/scripts/install.dependencies.sh
         show:Install _SvxLink::network

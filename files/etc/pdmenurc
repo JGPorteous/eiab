@@ -63,9 +63,9 @@ menu:network:Network Tools:Network Tools
 menu:os:OS Settings:OS Settings
         exec:_Disk Space:edit,pause:sudo df -h
         nop
-        exec:_APT Sources::sudo nano /etc/apt/sources.list
-        exec:_APT Update::sudo apt update
-        exec:_APT Upgrade::sudo apt upgrade
+        exec:APT _Sources::sudo nano /etc/apt/sources.list
+        exec:APT U_pdate::sudo apt update
+        exec:APT Up_grade::sudo apt upgrade
         nop
         exit:_Main menu..
 

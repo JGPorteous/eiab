@@ -1,14 +1,15 @@
+
 EchoLink in a Box by ZS6JGP
 ---------------------------
 
-Available commands
+Available commands:
 
 eiab-setup 
     - Setup, Reinstall and Update your System
 
 eiab-shell
     - Management Shell
-     
+
 eiab-help
     -Help on available commands
 
