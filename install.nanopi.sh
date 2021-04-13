@@ -61,7 +61,7 @@ echo Applying Menu
 cp ./files/etc/pdmenurc /etc/pdmenurc
 
 echo Customizing Script
-mv /usr/share/eiab/scripts/install.dependencies.nanopi.sh /usr/share/eiab/scripts/install.dependencies.sh
+cp -f /usr/share/eiab/scripts/install.dependencies.nanopi.sh /usr/share/eiab/scripts/install.dependencies.sh
 
 echo Adding echolink user
 useradd -m -d echolink
