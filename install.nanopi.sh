@@ -69,7 +69,7 @@ chmod +x /etc/pdmenurc
 usermod echolink --shell /etc/pdmenurc 
 
 echo Setting up commands
-ln /usr/share/eiab/scripts/setup.sh /usr/bin/eiab-setup
+ln -f /usr/share/eiab/scripts/setup.sh /usr/bin/eiab-setup
 
 echo
 echo
