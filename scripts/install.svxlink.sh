@@ -16,12 +16,14 @@ if [ -d "~/Downloads/svxlink/svxlink" ]; then
     mv svxlink svxlink-$now
 fi
 
+echo
 echo Get latest version of SvxLink Source Code
 echo -----------------------------------------
 git clone http://github.com/sm0svx/svxlink.git
 mkdir svxlink/src/build
 cd svxlink/src
 
+echo
 echo Building SvxLink Source Code
 echo ---------------- 
 cmake -DUSE_QT=OFF -DCMAKE_INSTALL_PREFIX=/usr -DSYSCONF_INSTALL_DIR=/etc -DLOCAL_STATE_DIR=/var -DWITH_SYSTEMD=ON
@@ -29,11 +31,13 @@ cmake -DUSE_QT=OFF -DCMAKE_INSTALL_PREFIX=/usr -DSYSCONF_INSTALL_DIR=/etc -DLOCA
 make
 make doc
 
+echo
 echo Installing SvxLink
 echo ------------------
 sudo make install
 sudo ldconfig
 
+echo
 echo Setup \& Enable Services
 echo -----------------------
 systemctl enable svxlink_gpio_setup
