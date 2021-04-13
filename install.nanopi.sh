@@ -1,7 +1,8 @@
 #!/bin/bash
 clear
 
-echo EiaB :: Installation Script for NanoPi
+echo EiaB \(Echolink in a Box by ZS6JPG\):: Installation Script for NanoPi
+echo ---------------------------------------------------------------------
 
 source /etc/lsb-release
 ARCH=$(uname -m)
@@ -17,9 +18,21 @@ then
     echo FAILURE: Expected armv7l as architecture, got $ARCH
     exit 1
 fi
+ 
+function installDependency() {
+    PKG_GIT_OK=$(dpkg-query -W --showformat='${Status}\n' $1|grep "install ok installed")
+    echo Checking for Package: $1: $PKG_GIT_OK
+    if [ "" = "$PKG_GIT_OK" ]; then
+    echo "No $1. Setting up $1."
+    sudo apt-get --yes install $1 
+    fi
+    echo
+}
 
-REQUIRED_PKG_GIT="git"
-PKG_GIT_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG_GIT|grep "install ok installed")
+#Install dependencies
+installDependency git
+installDependency pdmenu
+installDependency lnav
 
 echo Checking for Package: $REQUIRED_PKG_GIT: $PKG_GIT_OK
 if [ "" = "$PKG_GIT_OK" ]; then
@@ -28,14 +41,22 @@ if [ "" = "$PKG_GIT_OK" ]; then
 fi
 
 if [ -d "/usr/share/eiab" ]; then
+    echo
     echo Removing old version of EiaB
+    echo ----------------------------
     rm -fr /usr/share/eiab/
+    echo Done
+    echo
 fi
 
 echo Downloading Echolink in a Box
+echo -----------------------------
 git clone https://github.com/JGPorteous/Echolink-In-A-Box.git /usr/share/eiab/
+echo
 
 cd /usr/share/eiab/
 chmod +x ./setup.sh
+chmod +x ./scripts/*.sh
 ./setup.sh
 
+pwd
