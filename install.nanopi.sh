@@ -62,6 +62,8 @@ cp ./files/etc/pdmenurc /etc/pdmenurc
 
 echo Customizing Script
 cp -f /usr/share/eiab/scripts/install.dependencies.nanopi.sh /usr/share/eiab/scripts/install.dependencies.sh
+#sudo mkdir -p /usr/share/svxlink/events.d/local
+#sudo cp /usr/share/svxlink/events.d/EchoLink.tcl /usr/share/svxlink/events.d/local/
 
 echo Adding echolink user
 useradd -m -d echolink

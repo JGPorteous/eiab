@@ -45,6 +45,9 @@ menu:configuration:Configuration:Configuration
         exec:_SvxLink::sudo nano /etc/svxlink/svxlink.conf
         exec:_GPIO::sudo nano /etc/svxlink/gpio.conf
         exec:_EchoLink Module::sudo nano /etc/svxlink/svxlink.d/ModuleEchoLink.conf
+        exec:CrontTab::sudo crontab -e
+        exec:NanoPi Config::sudo npi-config
+        exec:Raspberry PI Config::sudo rpi-config
         nop
         exit:_Main menu..
 
