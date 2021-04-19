@@ -123,7 +123,7 @@ $ eiab-shell
     └─────────────────────────────────┘
 ```
 
-## Configuring the software
+## Configuring the Software
 
 After you have installed EIAB, the dependencies and installed SvxLink, you are ready to customize your system via the `eiab-shell` menu.
 
