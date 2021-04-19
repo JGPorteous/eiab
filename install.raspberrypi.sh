@@ -61,14 +61,18 @@ echo Applying Menu
 cp ./files/etc/pdmenurc /etc/pdmenurc
 
 echo Customizing Script
-mv /usr/share/eiab/scripts/install.dependencies.raspberrypi.sh /usr/share/eiab/scripts/install.dependencies.sh
+cp -f /usr/share/eiab/scripts/install.dependencies.raspberrypi.sh /usr/share/eiab/scripts/install.dependencies.sh
+sudo mkdir -p /usr/share/svxlink/events.d/local
+sudo cp ./files/usr/share/svxlink/events.d/local/ /usr/share/svxlink/events.d/local/
+cp -fR /usr/share/eiab/files/usr/share/svxlink/ /usr/share/svxlink/ 
+cp ./files/var/lib/alsa/asound.state /var/lib/alsa/
 
 echo Adding echolink user
 useradd -m -d echolink
 usermod -aG sudo echolink 
 echo "echolink:echolinkinabox" | chpasswd
 
-echo Setting up user "echolink\'s" shell
+echo Setting up user "echolink's" shell
 chmod +x /etc/pdmenurc
 usermod echolink --shell /etc/pdmenurc 
 
