@@ -47,7 +47,7 @@ rtl-sdr libcurl4-openssl-dev libjsoncpp-dev
 # Getting Started
 ## Wiring up the Hardware
 
-add content and pictures
+_add content and pictures_
 
 ## Getting farimilar with the commands and menus
 EIAB consists of an installation script, and various menus that allow you to easily setup the system without console command knowledge.
@@ -146,4 +146,7 @@ You can get the MAC addres or `"HWaddr"` from running `eiab-shell` then selectin
 For this IP Address you have chosen, allow the following incoming firewall `Port Forwarding` rules:
 * TCP 5200
 * UDP 5198-5199 
+
+# Once setup and ready to go
+Once you have setup your system, use PuTTY or your favorite SSH client to connect to the system. Login with the echolink user, and you will be presented with the eiab-shell menu.
 
