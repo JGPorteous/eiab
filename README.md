@@ -148,7 +148,7 @@ For this IP Address you have chosen, allow the following incoming firewall `Port
 * UDP 5198-5199 
 
 # Once setup and ready to go
-Once you have setup your system, use PuTTY or your favorite SSH client to connect to the system. Login with the echolink user, and you will be presented with the `eiab-shell` menu.
+Once you have setup your system, use PuTTY or your favorite SSH client to connect to the system. Login with the echolink user, and you will be presented with the `eiab-shell` menu. Or, login with root and run `eiab-shell`.
 
 You can add your public keys to _~/.ssh/authorized_keys_ to simplifly to login process. 
 
