@@ -130,8 +130,8 @@ After you have installed EIAB, the dependencies and installed SvxLink, you are r
 
 * Configuration > Svlink (Main config)
     * `SimplexLogic > CALLSIGN`
-* Configuration > GPIO (Customize GPIO Pins, else configure your gpio pins as requires)
-    * No updates required if you are running a NanoPi
+* Configuration > GPIO (Customize GPIO Pins)
+    * No updates required if you are running a NanoPi, else configure your gpio pins as requires
 * Configuration > EchoLink Module (EchoLink Settings)
     * `ModuleEchoLink > CALLSIGN` _the callsign for the echolink node_
     * `ModuleEchoLink > PASSWORD` _password you have set_
