@@ -27,6 +27,7 @@ curl -L https://git.io/JOGsD | bash && eiab-setup
 ```
 
 ## Packages used
+Just in case you want to know, here they are...
 ```
 software-properties-common htop unzip vorbis-tools apache2
 php libapache2-mod-php make cmake groff gzip doxygen tar git 
@@ -43,6 +44,7 @@ rtl-sdr libcurl4-openssl-dev libjsoncpp-dev
 add content and pictures
 
 ## Getting farimilar with the commands and menus
+EIAB consists of an installation script, and various menus that allow you to easily setup the system without console command knowledge.
 
 Getting help:
 The help command shows the various command available.
