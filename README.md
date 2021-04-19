@@ -118,7 +118,18 @@ $ eiab-shell
 
 ## Configuring the software
 
-After you have installed EIAB, the dependencies and installed SvxLink, you are ready to customize your system.
+After you have installed EIAB, the dependencies and installed SvxLink, you are ready to customize your system via the `eiab-shell` menu.
 
+* Configuration > Svlink (Main config)
+* Configuration > GPIO (Customize GPIO Pins)
+* Configuration > EchoLink Module (EchoLink Settings)
 
+## Setting up your Router / Firewall
+The prefered method is to setup your DHCP server on your router to provide a static IP Address for the NanoPi or Raspberry by based on it's MAC Address.
+
+You can get the MAC addres or "HWaddr" from running eiab-shell then selecting "Network Tools" > "View IP Settings"
+
+For this IP Address you have chosen, allow the following incoming firewall `Port Forwarding` rules:
+* TCP 5200
+* UDP 5198-5199 
 
