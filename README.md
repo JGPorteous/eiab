@@ -99,7 +99,6 @@ This menu allow you to setup APT sources, do updates and upgrades.
 Once your system is updated & upgraded you will need to:
 1. Install Dependecies
 2. Install SvxLink (This can take up to 20 minutes)
-
 <br/><br/>
 
 ### Shell Menu
