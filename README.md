@@ -1,7 +1,7 @@
 # Echolink-In-A-Box
 
 ## Introduction
-The Echolink-In-A-Box project aims at building a low cost, easy to implement solution for Echolink based on SvxLink.
+The Echolink-In-A-Box (eiab) project aims at building a low cost, easy to implement solution for Echolink based on SvxLink.
 <br/>
 <br/>
 
