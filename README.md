@@ -6,11 +6,17 @@ The Echolink-In-A-Box project aims at building a low cost, easy to implement sol
 <br/>
 
 # Hardware Requirements
+
+## Hardware used
 The hardware used for this project:
 * SAS 868 VHF or UHF Module, PVB Version 1.3 or higher (must have SPKEN Pin)
 * NanoPi Neo, Version 1.4
 * Raspberry Pi 3B (to be supported later with USB Audio interface)
 <br/><br/>
+
+## Wiring
+_add content_
+
 
 
 # Software
@@ -123,8 +129,15 @@ $ eiab-shell
 After you have installed EIAB, the dependencies and installed SvxLink, you are ready to customize your system via the `eiab-shell` menu.
 
 * Configuration > Svlink (Main config)
-* Configuration > GPIO (Customize GPIO Pins)
+    * SimplexLogic > CALLSIGN
+* Configuration > GPIO (Customize GPIO Pins, else configure your gpio pins as requires)
+    * No updates required if you are running a NanoPi
 * Configuration > EchoLink Module (EchoLink Settings)
+    * ModuleEchoLink > CALLSIGN
+    * ModuleEchoLink > PASSWORD
+    * ModuleEchoLink > SYSOPNAME
+    * ModuleEchoLink > LOCATION
+    * ModuleEchoLink > DECRIPTION
 
 ## Setting up your Router / Firewall
 The prefered method is to setup your DHCP server on your router to provide a static IP Address for the NanoPi or Raspberry by based on it's MAC Address.
