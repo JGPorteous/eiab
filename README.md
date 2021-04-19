@@ -84,9 +84,9 @@ $ eiab-setup
 
 This menu allow you to setup APT sources, do updates and upgrades.
 
-Once your system is updated & upgraded:
-* Install Dependecies
-* Install SvxLink (This can take up to 20 minutes)
+Once your system is updated & upgraded you will need to:
+1. Install Dependecies
+2. Install SvxLink (This can take up to 20 minutes)
 
 <br/><br/>
 
@@ -114,10 +114,7 @@ $ eiab-shell
 
 ## Configuring the software
 
-There are several aspect that need to be configured and each are easily done via the menu options.
+After you have installed EIAB, the dependencies and installed SvxLink, you are ready to customize your system.
 
-Once you have installed the software...
 
-### Compiling SvxLink
-add content
 
