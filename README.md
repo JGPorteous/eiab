@@ -102,7 +102,7 @@ Once your system is updated & upgraded you will need to:
 <br/><br/>
 
 ### Shell Menu
-The Shell command provides access useful tools
+The Shell command provides access to useful tools
 
 ```
 $ eiab-shell
@@ -149,4 +149,6 @@ For this IP Address you have chosen, allow the following incoming firewall `Port
 
 # Once setup and ready to go
 Once you have setup your system, use PuTTY or your favorite SSH client to connect to the system. Login with the echolink user, and you will be presented with the eiab-shell menu.
+
+You can add your public keys to _~/.ssh/authorized_keys_ to simplifly to login process. 
 
