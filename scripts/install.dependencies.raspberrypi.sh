@@ -4,7 +4,7 @@ echo Dependencies Installation for Rasperry Pi running Raspbian
 echo ----------------------------------------------------------
 echo
 
-apt -y install software-properties-common htop unzip vorbis-tools apache2
+apt -y install software-properties-common htop unzip vorbis-tools apache2 jq
 apt -y install php libapache2-mod-php
 apt -y install make cmake groff gzip doxygen tar git 
 apt -y install libsigc++ tcl libgcrypt-dev libasound-dev libspeex-dev librtlsdr-dev libpopt-dev libgsm1-dev  
