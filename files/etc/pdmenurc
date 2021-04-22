@@ -45,6 +45,11 @@ menu:configuration:Configuration:Configuration
         exec:_SvxLink::sudo nano /etc/svxlink/svxlink.conf
         exec:_GPIO::sudo nano /etc/svxlink/gpio.conf
         exec:_EchoLink Module::sudo nano /etc/svxlink/svxlink.d/ModuleEchoLink.conf
+        nop
+        exec:Edit _Audio Levels::sudo alsamixer
+        exec:Save _Audio Levels::sudo alsactl store
+        exec:Reset _Audio Levels::sudo cp -f /usr/share/eiab/files/var/lib/alsa/asound.state /var/lib/alsa/asound.state
+        nop
         exec:CrontTab::sudo crontab -e
         exec:NanoPi Config::sudo npi-config
         exec:Raspberry PI Config::sudo rpi-config
