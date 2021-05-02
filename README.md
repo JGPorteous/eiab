@@ -24,7 +24,7 @@ _add content_
 
 To install, run this on a NanoPi running Ubuntu:
 ```
-curl -L https://git.io/JOGs2 | bash && eiab-setup
+curl -L https://git.io/J38AI | bash && eiab-setup
 ```
 
 To install, run this on a Raspberry Pi running Raspbian:
