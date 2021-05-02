@@ -5,7 +5,7 @@ echo --------------------
 mkdir -p ~/Downloads/svxlink
 
 echo Adding users
-useradd -rG audio,plugdev,dialout,daemon svxlink
+useradd -d /home/svxlink -rG audio,plugdev,dialout,daemon svxlink
 
 cd ~/Downloads/svxlink
 
