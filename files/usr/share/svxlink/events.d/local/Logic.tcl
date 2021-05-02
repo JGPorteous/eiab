@@ -764,7 +764,7 @@ proc lightningAlert {}  {
 
   set minsSinceLightning 0;
 
-  set filename "/home/svxlink/scripts/weather/lightning.last.time";
+  set filename "/usr/share/eiab/scripts/weather/lightning.last.time";
   if { [file exists $filename] == 1} {
         set flightninglasttime [open $filename "r"];
         set lightninglasttime [gets $flightninglasttime]; 
