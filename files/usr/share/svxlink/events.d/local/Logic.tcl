@@ -175,6 +175,9 @@ proc send_short_ident {{hour -1} {minute -1}} {
     }
     playSilence 500;
   }
+
+  playMsg "Announcements" "announcement";
+  #lightningAlert;
 }
 
 
@@ -756,6 +759,34 @@ if [info exists CFG_LONG_CW_ID_ENABLE] {
 #
 # This file has not been truncated
 #
+
+# Round Value
+$
+proc rndValue {a} {
+  puts "Got $a";
+  set rndValue [format "%.1f" $a];
+  set rndIValue [format "%.0f" $rndValue];
+  #puts "rndIValue $rndValue";
+  #puts "format with no dec [format "%.0f" $a]";
+  if {$rndValue  == $rndIValue} { set rndValue $rndIValue; }
+  return $rndValue;
+}
+
+# Degrees to Cardinal
+#
+proc degreesToCardinal {a} {
+  if {$a >= 0 && $a < 22.5} { return "dir_n";}
+  if {$a >= 337.5 && $a <= 360} { return "dir_n";}
+  if {$a >= 292.5 && $a < 337.5} { return "dir_nw";}
+  if {$a >= 247.5 && $a < 292.5} { return "dir_w";}
+  if {$a >= 202.5 && $a < 247.5} { return "dir_sw";}
+  if {$a >= 157.5 && $a < 202.5} { return "dir_s";}
+  if {$a >= 112.5 && $a < 157.5} { return "dir_se";}
+  if {$a >= 67.5 && $a < 112.5} { return "dir_e";}
+  if {$a >= 22.5 && $a < 67.5} { return "dir_ne";}
+  return "dir_north";
+ }
+
 
 #  This function checks if there has been lightning in the passed 15 Minutes and plays an alert if there has been
 #
