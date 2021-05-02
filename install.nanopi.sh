@@ -54,6 +54,7 @@ echo -----------------------------
 git clone https://github.com/JGPorteous/Echolink-In-A-Box.git /usr/share/eiab/
 echo
 
+sudo mkdir -p /usr/share/eiab/scripts/
 cd /usr/share/eiab/
 chmod +x ./scripts/*.sh
 
