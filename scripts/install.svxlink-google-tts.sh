@@ -1,2 +1,2 @@
 #!/bin/bash
-git clone install.svxlink-google-tts.sh /usr/share/svxlink-google-tts
+git clone https://github.com/n7ipb/svxlink-google-tts.git /usr/share/svxlink-google-tts
