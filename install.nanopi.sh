@@ -64,9 +64,9 @@ cp ./files/etc/pdmenurc /etc/pdmenurc
 echo Customizing Script
 cp -f /usr/share/eiab/scripts/install.dependencies.nanopi.sh /usr/share/eiab/scripts/install.dependencies.sh
 sudo mkdir -p /usr/share/svxlink/events.d/local
-sudo cp ./files/usr/share/svxlink/events.d/local/ /usr/share/svxlink/events.d/local/
+sudo cp /usr/share/eiab/files/usr/share/svxlink/events.d/local/ /usr/share/svxlink/events.d/local/
 cp -fR /usr/share/eiab/files/usr/share/svxlink/ /usr/share/svxlink/ 
-cp ./files/var/lib/alsa/asound.state /var/lib/alsa/
+#cp /usr/share/eiab/files/var/lib/alsa/asound.state /var/lib/alsa/
 
 echo Adding echolink user
 useradd -m -d echolink
