@@ -155,15 +155,6 @@ proc send_short_ident {{hour -1} {minute -1}} {
     playSilence 500;
   }
 
-  # Play announcement file if enabled
-  if {$short_announce_enable} {
-    puts "Playing short announce"
-    if [file exist "$short_announce_file"] {
-      playFile "$short_announce_file"
-      playSilence 500
-    }
-  }
-
   # Play CW id if enabled
   if {$short_cw_id_enable} {
     puts "Playing short CW ID"
@@ -176,7 +167,16 @@ proc send_short_ident {{hour -1} {minute -1}} {
     playSilence 500;
   }
 
-  playMsg "Announcements" "announcement";
+  # Play announcement file if enabled
+  if {$short_announce_enable} {
+    puts "Playing short announce"
+    if [file exist "$short_announce_file"] {
+      playFile "$short_announce_file"
+      playSilence 500
+    }
+  }
+
+  
   #lightningAlert;
 }
 
