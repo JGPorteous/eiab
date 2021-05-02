@@ -802,7 +802,7 @@ proc lightningAlert {}  {
 # This Function collects the weather report_ctcss
 #
 
-proc weatherReport{} {
+proc weatherReport {} {
   set filename "/usr/share/eiab/scripts/weather/temp.value";
   if { [file exists $filename] == 1} {
  	set f [open $filename "r"];
@@ -875,4 +875,5 @@ if { $winddeg != "null" } {
     }
   }
 
+ return;
 }
