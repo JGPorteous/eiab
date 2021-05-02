@@ -218,6 +218,8 @@ proc send_long_ident {hour minute} {
         }
       }
     }
+    
+    weatherReport;
 
     playSilence 500;
   }
