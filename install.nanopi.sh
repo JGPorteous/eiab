@@ -1,5 +1,7 @@
 #!/bin/bash
 clear
+currentdir=$(pwd)
+cd ~
 
 echo EiaB \(Echolink in a Box by ZS6JPG\):: Installation Script for NanoPi & Ubuntu
 echo ------------------------------------------------------------------------------
@@ -51,7 +53,7 @@ fi
 
 echo Downloading Echolink in a Box
 echo -----------------------------
-git clone https://github.com/JGPorteous/Echolink-In-A-Box.git /usr/share/eiab/
+git clone https://github.com/JGPorteous/eiab.git /usr/share/eiab/
 echo
 
 sudo mkdir -p /usr/share/eiab/scripts/
@@ -86,3 +88,5 @@ echo
 echo
 echo Run $(tput setaf 6)eiab-setup$(tput sgr 0) to continue . . .
 echo
+
+cd $currentdir
