@@ -217,7 +217,7 @@ proc send_long_ident {hour minute} {
       }
     }
 
-    #weatherReport;
+    weatherReport;
     #lightningAlert;
 
     playSilence 500;
