@@ -18,6 +18,7 @@ menu:main:---EchoLink in a Box by ZS6JGP---
         show:_Configuration::configuration
         show:_Operating System::os
         show:_Advanced Menu::advanced
+        show:_Annoucments::annoucement
         nop
         #exec:_test:edit,pause:echo ~var one? ~var two:~
         #nop
@@ -25,6 +26,12 @@ menu:main:---EchoLink in a Box by ZS6JGP---
         exec:CPU _Temperature:truncate:echo CPU: $((`cat /sys/class/thermal/thermal_zone0/temp` / 1000)) Degrees
         nop
         exit:_Exit
+
+menu:annoucement:Short Announcements Menu:Short Announcements Menu
+        exec:_Remove Announcement:truncate:sudo rm -f /home/svxlink/short_announce_file.wav && echo Done
+        exec:_New Announcement:truncate:sudo /usr/share/eiab/script/announcements.new.sh
+        nop
+        exit:_Main menu..
 
 menu:services:Services Menu:Services Menu
         exec:_Stop SvxLink:truncate:sudo service svxlink stop&& echo Stopped Service
