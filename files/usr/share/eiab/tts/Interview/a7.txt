@@ -1,0 +1,1 @@
+I only speak English, but I can understand Afrikaans and a bit of Portuguese. For all my voice processing, like reading the weather and other announcements, I use the google cloud text to speech engine.

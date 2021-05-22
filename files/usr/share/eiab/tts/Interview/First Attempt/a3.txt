@@ -1,0 +1,1 @@
+I am built on a NanoPI Neo with a Quad core, 1GHz processor and half a gigabyte of RAM. I'm running on Ubuntu and I'm online 24/7 with super faster internet. I linked by RF to the SZ6STN VHF repeater, with a one watt transciever. All this is small enough to fit in a box of ciggarettes.

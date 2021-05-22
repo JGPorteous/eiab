@@ -1,0 +1,1 @@
+Actually only English, but my Portugese and Afrikaans are improving all the time! For all my voice processing, like reading the weather and other annoucements, I use the google cloud text to speach engine.

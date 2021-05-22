@@ -1,0 +1,2 @@
+Radio waves are instant, well almost; they travel at three hundred million meters per second. When you talk to someone on a cell phone, there is a second delay due to relaying the signal through towers and their network, but you don't notice it until you are on the phone and also the radio with someone. It's the same thing when on echolink, there is a little delay. And it's more relevant when using Radio with EchoLink. So, EchoLink to EchoLink, or Radio to Radio, will feel normal.
+

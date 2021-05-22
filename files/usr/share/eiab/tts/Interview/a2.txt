@@ -1,0 +1,2 @@
+I'm permanently connected to openweathermap dot org for the current weather. So I have the most up to date information for Sandton. I also have a live feed from a home built lightning detector, it's not always accurate and is a work in progress. Usually if anything happens in a thirty kilometre radius, I know about it!
+
