@@ -10,4 +10,5 @@ fi
 
 git clone https://github.com/n7ipb/svxlink-google-tts.git /usr/share/svxlink-google-tts
 pip3 install virtualenv
-export GOOGLE_APPLICATION_CREDENTIALS=/usr/share/svxlink-google-tts/.google
+mkdir -p ~/.google/
+touch ~/.google/key.json
