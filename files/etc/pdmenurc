@@ -52,6 +52,7 @@ menu:configuration:Configuration:Configuration
         exec:_SvxLink::sudo nano /etc/svxlink/svxlink.conf
         exec:_GPIO::sudo nano /etc/svxlink/gpio.conf
         exec:_EchoLink Module::sudo nano /etc/svxlink/svxlink.d/ModuleEchoLink.conf
+        exec:_Svxlink Google TTS::sudo nano /usr/share/svxlink-google-tts/.google
         nop
         exec:Edit _Audio Levels::sudo alsamixer
         exec:Save _Audio Levels::sudo alsactl store
