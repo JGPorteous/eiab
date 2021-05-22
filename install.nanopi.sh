@@ -69,6 +69,8 @@ sudo mkdir -p /usr/share/svxlink/events.d/local
 sudo cp /usr/share/eiab/files/usr/share/svxlink/events.d/local/* /usr/share/svxlink/events.d/local/
 cp -fR /usr/share/eiab/files/usr/share/svxlink/ /usr/share/svxlink/ 
 #cp /usr/share/eiab/files/var/lib/alsa/asound.state /var/lib/alsa/
+mv /usr/share/eiab/files/usr/share/eiab/* /usr/share/eiab/
+
 
 echo Adding echolink user
 useradd -m -d echolink
