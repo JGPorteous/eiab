@@ -1,0 +1,2 @@
+ nmcli connection modify eth0 ipv4.dns "1.1.1.1, 1.0.0.1"
+
