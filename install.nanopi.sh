@@ -89,6 +89,8 @@ ln -f /usr/share/eiab/scripts/eiab/eiab-version.sh /usr/bin/eiab-version
 ln -f /etc/pdmenurc /usr/bin/eiab-shell
 
 echo
+eiab-version
+
 echo
 echo Run $(tput setaf 6)eiab-setup$(tput sgr 0) to continue . . .
 echo
