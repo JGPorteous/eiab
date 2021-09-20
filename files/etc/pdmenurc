@@ -9,7 +9,7 @@ color:title:blue:white
 color:base:blue:white
 
 # Define the main menu.
-menu:main:---EchoLink in a Box by ZS6JGP---
+menu:main:--- Echolink-In-A-Box by ZS6JGP ---
         nop
         show:_Services Menu::services
         show:_Network Tools::network

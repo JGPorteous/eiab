@@ -20,7 +20,7 @@ _add content_
 
 
 # Software
-## Installation Scripts for Echolink in a Box
+## Installation Scripts for Echolink-In-A-Box
 
 To install, run this on a NanoPi running Ubuntu:
 ```
@@ -57,7 +57,7 @@ The help command shows the various command available.
 
 ```
 $ eiab-help 
-EchoLink in a Box by ZS6JGP
+Echolink-In-A-Box by ZS6JGP
 ---------------------------
 
 Available commands:
@@ -77,21 +77,21 @@ The setup menu allows you to setup the system.
 ```
 $ eiab-setup
 
-    ┌---EchoLink in a Box by ZS6JGP - Setup Menu---┐
-    │ APT Sources                                  │
-    │ APT Update                                   │
-    │ APT Upgrade                                  │
-    │                                              │
-    │ Install Dependencies                         │
-    │ Install SvxLink                              │
-    │                                              │
-    │ System Info                                  │
-    │ CPU Temperature                              │
-    │                                              │
-    │ Reboot System                                │
-    │                                              │
-    │ Exit                                         │
-    └──────────────────────────────────────────────┘
+    ┌--- Echolink-In-A-Box by ZS6JGP - Setup Menu ---┐
+    │ APT Sources                                    │
+    │ APT Update                                     │
+    │ APT Upgrade                                    │
+    │                                                │
+    │ Install Dependencies                           │
+    │ Install SvxLink                                │
+    │                                                │
+    │ System Info                                    │
+    │ CPU Temperature                                │
+    │                                                │
+    │ Reboot System                                  │
+    │                                                │
+    │ Exit                                           │
+    └────────────────────────────────────────────────┘
 ```
 
 This menu allow you to setup APT sources, do updates and upgrades.
@@ -107,20 +107,20 @@ The Shell command provides access to useful tools
 ```
 $ eiab-shell
 
-    ┌---EchoLink in a Box by ZS6JGP---┐
-    │ Services Menu                   │
-    │ Network Tools                   │
-    │ Logs                            │
-    │                                 │
-    │ Configuration                   │
-    │ Operating System                │
-    │ Advanced Menu                   │
-    │                                 │
-    │ System Info                     │
-    │ CPU Temperature                 │
-    │                                 │
-    │ Exit                            │
-    └─────────────────────────────────┘
+    ┌--- Echolink-In-A-Box by ZS6JGP ---┐
+    │ Services Menu                     │
+    │ Network Tools                     │
+    │ Logs                              │
+    │                                   │
+    │ Configuration                     │
+    │ Operating System                  │
+    │ Advanced Menu                     │
+    │                                   │
+    │ System Info                       │
+    │ CPU Temperature                   │
+    │                                   │
+    │ Exit                              │
+    └───────────────────────────────────┘
 ```
 
 ## Configuring the Software

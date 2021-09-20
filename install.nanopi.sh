@@ -3,7 +3,7 @@ clear
 currentdir=$(pwd)
 cd ~
 
-echo EiaB \(Echolink in a Box by ZS6JPG\):: Installation Script for NanoPi & Ubuntu
+echo EiaB \(Echolink-In-A-Box by ZS6JPG\):: Installation Script for NanoPi & Ubuntu
 echo ------------------------------------------------------------------------------
 
 source /etc/lsb-release
@@ -51,7 +51,7 @@ if [ -d "/usr/share/eiab" ]; then
     echo
 fi
 
-echo Downloading Echolink in a Box
+echo Downloading Echolink-In-A-Box
 echo -----------------------------
 git clone https://github.com/JGPorteous/eiab.git /usr/share/eiab/
 echo
