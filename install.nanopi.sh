@@ -72,7 +72,7 @@ cp -fR /opt/eiab/files/usr/share/svxlink/ /usr/share/svxlink/
 mv /opt/eiab/files/opt/eiab/* /opt/eiab/
 
 
-echo Adding echolink user
+echo Adding echolink user *
 useradd -m -d echolink
 usermod -aG sudo echolink 
 echo "echolink:echolinkinabox" | chpasswd
@@ -82,11 +82,11 @@ chmod +x /etc/pdmenurc
 usermod echolink --shell /etc/pdmenurc 
 
 echo Setting up commands
-ln -f /opt/eiab/scripts/setup.sh /usr/bin/eiab-setup
-ln -f /opt/eiab/scripts/update.nanopi.sh /usr/bin/eiab-update
-ln -f /opt/eiab/scripts/help.sh /usr/bin/eiab-help
-ln -f /opt/eiab/scripts/eiab/eiab-version.sh /usr/bin/eiab-version
-ln -f /etc/pdmenurc /usr/bin/eiab-shell
+ln -fs /opt/eiab/scripts/setup.sh /usr/bin/eiab-setup
+ln -fs /opt/eiab/scripts/update.nanopi.sh /usr/bin/eiab-update
+ln -fs /opt/eiab/scripts/help.sh /usr/bin/eiab-help
+ln -fs /opt/eiab/scripts/eiab/eiab-version.sh /usr/bin/eiab-version
+ln -fs /etc/pdmenurc /usr/bin/eiab-shell
 
 echo
 eiab-version
