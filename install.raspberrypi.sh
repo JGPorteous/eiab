@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 
-echo EiaB \(Echolink-In-A-Box by ZS6JPG\):: Installation Script for Rasperry Pi
+echo EiaB \(Echolink-In-A-Box by ZS6JPG\) :: Installation Script for Rasperry Pi
 echo --------------------------------------------------------------------------
 
 source /etc/*release*
