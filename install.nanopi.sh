@@ -3,7 +3,7 @@ clear
 currentdir=$(pwd)
 cd ~
 
-echo EiaB \(Echolink-In-A-Box by ZS6JPG\):: Installation Script for NanoPi & Ubuntu
+echo EiaB \(Echolink-In-A-Box by ZS6JPG\) :: Installation Script for NanoPi & Ubuntu
 echo ------------------------------------------------------------------------------
 
 source /etc/lsb-release
