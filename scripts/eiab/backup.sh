@@ -1,6 +1,7 @@
 #!/bin/bash
 BACKUP_FOLDER=/usr/share/eiab/backup.tmp
 mkdir -p $BACKUP_FOLDER
+mkdir -p /usr/share/eiab/backups
 rm -fr $BACKUP_FOLDER/*
 
 #rsync -arR /etc/svxlink $BACKUP_FOLDER
