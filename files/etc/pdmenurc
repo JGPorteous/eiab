@@ -24,6 +24,7 @@ menu:main:--- Echolink-In-A-Box by ZS6JGP ---
         #nop
         exec:System _Info:edit,display:echo "\n" | cat /var/run/motd.dynamic  | sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g'
         exec:CPU _Temperature:truncate:echo CPU: $((`cat /sys/class/thermal/thermal_zone0/temp` / 1000)) Degrees
+        exec:Backup:truncate:sudo /usr/share/eiab/scripts/eiab/backup.sh 
         nop
         exit:_Exit
 
