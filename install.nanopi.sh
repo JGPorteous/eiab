@@ -58,7 +58,7 @@ echo
 
 sudo mkdir -p /usr/share/eiab/scripts/
 cd /usr/share/eiab/
-chmod +x ./scripts/*.sh
+find ./scripts/ -type f -name "*.sh" -print0 |xargs -0 chmod +x
 
 echo Applying Menu
 cp ./files/etc/pdmenurc /etc/pdmenurc
