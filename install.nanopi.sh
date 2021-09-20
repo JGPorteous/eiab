@@ -23,7 +23,7 @@ fi
  
 function installDependency() {
     PKG_GIT_OK=$(dpkg-query -W --showformat='${Status}\n' $1|grep "install ok installed")
-    echo Checking for Package: $1: $PKG_GIT_OK
+    echo -n Checking for Package: $1: $PKG_GIT_OK
     if [ "" = "$PKG_GIT_OK" ]; then
     echo "No $1. Setting up $1."
     sudo apt-get --yes install $1 
