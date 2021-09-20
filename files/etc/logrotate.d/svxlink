@@ -1,0 +1,14 @@
+dateext
+dateformat -%Y%m%d
+
+/var/log/svxlink/svxlink {
+    daily
+    size 1k
+    rotate 100
+    create 644 svxlink svxlink
+    missingok
+    compress
+    postrotate
+        /usr/share/eiab/scripts/eiab/restart.svxlink.sh
+    endscript
+}
