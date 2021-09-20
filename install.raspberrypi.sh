@@ -87,3 +87,4 @@ eiab-version
 
 echo Run $(tput setaf 6)eiab-setup$(tput sgr 0) to continue . . .
 echo
+ 
