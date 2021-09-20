@@ -795,7 +795,7 @@ proc lightningAlert {}  {
 
   set minsSinceLightning 0;
 
-  set filename "/usr/share/eiab/scripts/weather/lightning.last.time";
+  set filename "/opt/eiab/scripts/weather/lightning.last.time";
   if { [file exists $filename] == 1} {
         set flightninglasttime [open $filename "r"];
         set lightninglasttime [gets $flightninglasttime]; 
@@ -834,7 +834,7 @@ proc lightningAlert {}  {
 #
 
 proc weatherReport {} {
-  set filename "/usr/share/eiab/scripts/weather/temp.value";
+  set filename "/opt/eiab/scripts/weather/temp.value";
   if { [file exists $filename] == 1} {
  	set f [open $filename "r"];
 	set temp [gets $f];
@@ -843,7 +843,7 @@ proc weatherReport {} {
 	close $f
   } 
 
-  set filename "/usr/share/eiab/scripts/weather/humidity.value";
+  set filename "/opt/eiab/scripts/weather/humidity.value";
   if { [file exists $filename] == 1} {  
 	set f [open $filename "r"];
   	set humidity [gets $f];
@@ -852,7 +852,7 @@ proc weatherReport {} {
 	close $f
   }
 
-  set filename "/usr/share/eiab/scripts/weather/wind.speed.value";
+  set filename "/opt/eiab/scripts/weather/wind.speed.value";
   if { [file exists $filename] == 1} {
   	set fwindspeed [open $filename "r"];
   	set windspeed  [gets $f];
@@ -862,7 +862,7 @@ proc weatherReport {} {
     puts "Can't find $filename for wind speed";
   }
 
-  set filename "/usr/share/eiab/scripts/weather/wind.deg.value";
+  set filename "/opt/eiab/scripts/weather/wind.deg.value";
   if { [file exists $filename] == 1} {
 	set f [open $filename "r"];
   	set winddeg  [gets $f];

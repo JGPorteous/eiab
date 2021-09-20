@@ -40,32 +40,32 @@ if [ "" = "$PKG_GIT_OK" ]; then
   sudo apt-get --yes install $REQUIRED_PKG_GIT 
 fi
 
-if [ -d "/usr/share/eiab" ]; then
+if [ -d "/opt/eiab" ]; then
     echo
     echo Removing old version of EiaB
     echo ----------------------------
-    rm -fr /usr/share/eiab/
+    rm -fr /opt/eiab/
     echo Done
     echo
 fi
 
 echo Downloading Echolink-In-A-Box
 echo -----------------------------
-git clone https://github.com/JGPorteous/Echolink-In-A-Box.git /usr/share/eiab/
+git clone https://github.com/JGPorteous/Echolink-In-A-Box.git /opt/eiab/
 echo
 
-sudo mkdir /usr/share/eiab/
-cd /usr/share/eiab/
+sudo mkdir /opt/eiab/
+cd /opt/eiab/
 chmod +x ./scripts/*.sh
 
 echo Applying Menu
 cp ./files/etc/pdmenurc /etc/pdmenurc
 
 echo Customizing Script
-cp -f /usr/share/eiab/scripts/install.dependencies.raspberrypi.sh /usr/share/eiab/scripts/install.dependencies.sh
+cp -f /opt/eiab/scripts/install.dependencies.raspberrypi.sh /opt/eiab/scripts/install.dependencies.sh
 sudo mkdir -p /usr/share/svxlink/events.d/local
 sudo cp ./files/usr/share/svxlink/events.d/local/ /usr/share/svxlink/events.d/local/
-cp -fR /usr/share/eiab/files/usr/share/svxlink/ /usr/share/svxlink/ 
+cp -fR /opt/eiab/files/usr/share/svxlink/ /usr/share/svxlink/ 
 cp ./files/var/lib/alsa/asound.state /var/lib/alsa/
 
 echo Adding echolink user
@@ -78,8 +78,8 @@ chmod +x /etc/pdmenurc
 usermod echolink --shell /etc/pdmenurc 
 
 echo Setting up commands
-ln -f /usr/share/eiab/scripts/setup.sh /usr/bin/eiab-setup
-ln -f /usr/share/eiab/scripts/help.sh /usr/bin/eiab-help
+ln -f /opt/eiab/scripts/setup.sh /usr/bin/eiab-setup
+ln -f /opt/eiab/scripts/help.sh /usr/bin/eiab-help
 ln -f /etc/pdmenurc /usr/bin/eiab-shell
 
 echo

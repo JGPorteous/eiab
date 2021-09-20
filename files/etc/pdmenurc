@@ -24,13 +24,13 @@ menu:main:--- Echolink-In-A-Box by ZS6JGP ---
         #nop
         exec:System _Info:edit,display:echo "\n" | cat /var/run/motd.dynamic  | sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g'
         exec:CPU _Temperature:truncate:echo CPU: $((`cat /sys/class/thermal/thermal_zone0/temp` / 1000)) Degrees
-        exec:_Backup:truncate:sudo /usr/share/eiab/scripts/eiab/backup.sh 
+        exec:_Backup:truncate:sudo /opt/eiab/scripts/eiab/backup.sh 
         nop
         exit:_Exit
 
 menu:annoucement:Short Announcements Menu:Short Announcements Menu
         exec:_Remove Announcement:truncate:sudo rm -f /home/svxlink/short_announce_file.wav && echo Done
-        exec:_New Announcement:truncate:sudo /usr/share/eiab/script/announcements.new.sh
+        exec:_New Announcement:truncate:sudo /opt/eiab/script/announcements.new.sh
         nop
         exit:_Main menu..
 
@@ -57,7 +57,7 @@ menu:configuration:Configuration:Configuration
         nop
         exec:Edit _Audio Levels::sudo alsamixer
         exec:Save _Audio Levels::sudo alsactl store
-        exec:Reset _Audio Levels::sudo cp -f /usr/share/eiab/files/var/lib/alsa/asound.state /var/lib/alsa/asound.state
+        exec:Reset _Audio Levels::sudo cp -f /opt/eiab/files/var/lib/alsa/asound.state /var/lib/alsa/asound.state
         nop
         exec:CrontTab::sudo crontab -e
         exec:NanoPi Config::sudo npi-config
