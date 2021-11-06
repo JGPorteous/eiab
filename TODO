@@ -1,0 +1,134 @@
+Rewrite Weather TCL code, use file for last used (don't run if data isn't fresh)
+Add Script for adding Weather to CronTab
+
+Backup Scripts
+Restore Scripts
+
+Prune QSO Folder x Days
+
+Log Rotate for svxlink logs
+
+Prune for svxlink logs x days/months
+
+
+iwconfig wlx18d6c71c0727 essid CloudCoders key s:C@lm@t078
+ dhclient wlx18d6c71c0727
+
+iwconfig wlx18d6c71c0727 essid CELL_C_7C43 key s:5N8VOTK4
+nmcli connection add type wifi con-name outofrange ssid CELL_C_7C43 802-11-wireless-security.key-mgmt WPA-PSK 802-11-wireless-security.psk 5N8VOTK4
+nmcli device wifi con "CELL_C_7C43" password "5N8VOTK4"
+nmcli device wifi con "CloudCoders" password "C@lm@t078"
+
+
+
+You'll find a known to be working driver on this github:
+https://github.com/lwfinger/rtl8188eu
+
+First, undo what you did with provided CD
+Then install the driver from github:
+
+# Prepare
+sudo apt update
+sudo apt-get install -f
+sudo apt-get dist-upgrade
+sudo apt-get -y install dkms build-essential git
+
+# Go install the driver 
+mkdir ~/DriverBuild
+cd ~/DriverBuild
+git clone https://github.com/lwfinger/rtl8188eu.git
+sudo dkms add ./rtl8188eu
+sudo dkms build 8188eu/1.0
+sudo dkms install 8188eu/1.0
+reboot
+If the network manager says: "Device is not ready"
+Make sure you copied the firmware (rtl8188eufw.bin) to /lib/firmware/rtlwifi/
+
+
+
+wlx18d6c71c0727 Link encap:Ethernet  HWaddr 18:d6:c7:1c:07:27
+          inet addr:192.168.0.165  Bcast:192.168.0.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1896 errors:0 dropped:302 overruns:0 frame:0
+          TX packets:120 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:279744 (279.7 KB)  TX bytes:23780 (23.7 KB)
+
+
+wlx18d6c71c0727  IEEE 802.11bgn  ESSID:"CloudCoders"  Nickname:"<WIFI@REALTEK>"
+          Mode:Managed  Frequency:2.417 GHz  Access Point: D8:07:B6:D8:09:E5
+          Bit Rate:72.2 Mb/s   Sensitivity:0/0
+          Retry:off   RTS thr:off   Fragment thr:off
+          Encryption key:****-****-****-****-****-****-****-****   Security mode:open
+          Power Management:off
+          Link Quality=91/100  Signal level=62/100  Noise level=0/100
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:0  Invalid misc:0   Missed beacon:0
+
+lo        no wireless extensions.
+
+
+
+
+
+/var/spool/cron/crontabs/root
+
+*/58 */1 * * * /usr/share/eiab/scripts/weather/getweather.sh
+
+
+git clone https://github.com/JGPorteous/eiab.git /usr/share/eiab/
+cd /usr/share/eiab/
+chmod +x ./scripts/*.sh
+for d in /usr/share/eiab/scripts/; do
+ echo $d
+done
+cp ./files/etc/pdmenurc /etc/pdmenurc
+
+
+
+
+LOGS 
+root@eiab-sandton-vhf:/var/log/svxlink# cat /etc/logrotate.d/svxlink
+dateext
+dateformat -%Y%m%d
+
+/var/log/svxlink/* {
+    daily
+    size 1k
+    rotate 100
+    create 644 svxlink svxlink
+    missingok
+    compress
+}
+
+
+test logs
+logrotate /etc/logrotate.conf
+
+
+
+
+
+
+DEFAULTS
+root@eiab-sandton-vhf:/var/log/svxlink# cat /etc/default/svxlink
+#############################################################################
+#
+# Configuration file for the SvxLink Systemd unit file
+#
+#############################################################################
+
+# The user to run the SvxLink server as
+RUNASUSER=svxlink
+
+# Specify which configuration file to use
+CFGFILE=/etc/svxlink/svxlink.conf
+
+# Where to place the log file
+LOGFILE=/var/log/svxlink/svxlink
+
+# Where to place the PID file
+PIDFILE=/run/svxlink.pid
+
+# Disable Alsa zerofill if set to 0 (see manual page)
+#ASYNC_AUDIO_ALSA_ZEROFILL=1

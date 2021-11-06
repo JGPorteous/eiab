@@ -85,6 +85,7 @@ echo Setting up commands
 ln -f /usr/share/eiab/scripts/setup.sh /usr/bin/eiab-setup
 ln -f /usr/share/eiab/scripts/help.sh /usr/bin/eiab-help
 ln -f /etc/pdmenurc /usr/bin/eiab-shell
+chmod 777 /usr/share/eiab/scripts/weather/*
 
 echo
 echo

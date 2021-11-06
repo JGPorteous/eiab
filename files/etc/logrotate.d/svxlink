@@ -1,0 +1,15 @@
+dateext
+dateformat -%Y%m%d
+
+/var/log/svxlink/svxlink {
+    daily
+    size 1k
+    rotate 100
+    create 644 svxlink svxlink
+    missingok
+    compress
+    postrotate
+        /bin/systemctl restart svxlink.service
+#        /bin/echo "`date` Logrotate Completed" >> /log/var/svxlink/svxlink.logrotate
+    endscript
+}
