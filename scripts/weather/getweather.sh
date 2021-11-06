@@ -1,15 +1,15 @@
 #!/bin/bash
 currentdir=$(pwd)
 #Application ID for openweather
-weatherappid=$(cat /usr/share/eiab/scripts/weather/weather.appid)
+weatherappid=$(cat /opt/eiab/scripts/weather/weather.appid)
 #ID / location
-weatherid=$(cat /usr/share/eiab/scripts/weather/weather.id)
+weatherid=$(cat /opt/eiab/scripts/weather/weather.id)
 
 #dev
-#cp ~/Downloads/echolink-in-a-box/files/usr/share/eiab/scripts/getweather.sh /usr/share/eiab/scripts/
+#cp ~/Downloads/echolink-in-a-box/files/opt/eiab/scripts/getweather.sh /opt/eiab/scripts/
 
-mkdir -p /usr/share/eiab/scripts/weather
-cd /usr/share/eiab/scripts/weather 
+mkdir -p /opt/eiab/scripts/weather
+cd /opt/eiab/scripts/weather 
 
 echo current directory is $(pwd)
 echo
@@ -17,7 +17,7 @@ echo
 rm weather.xml -f 
 url="http://api.openweathermap.org/data/2.5/weather?id=$weatherid&APPID=$weatherappid&mode=json&units=metric"
  
-wget -O /usr/share/eiab/scripts/weather/weather.json "${url}"
+wget -O /opt/eiab/scripts/weather/weather.json "${url}"
 
 
 jq -r '.main.temp' weather.json > temp.value 
