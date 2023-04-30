@@ -35,6 +35,7 @@ function installDependency() {
 installDependency git
 installDependency pdmenu
 installDependency lnav
+installDependency apt-utils
 
 echo Checking for Package: $REQUIRED_PKG_GIT: $PKG_GIT_OK
 if [ "" = "$PKG_GIT_OK" ]; then
