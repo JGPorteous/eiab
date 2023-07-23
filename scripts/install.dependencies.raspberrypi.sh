@@ -13,3 +13,4 @@ apt -y install python3 python3-pip
 wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
 python get-pip.py
 pip install --upgrade setuptools
+sudo apt install python3-pip
