@@ -4,7 +4,7 @@ echo Dependencies Installation for NanoPi running Ubuntu
 echo ---------------------------------------------------
 echo 
 
-apt -y install software-properties-common htop unzip vorbis-tools apache2 jq nano libgpiod-dev gpiod
+apt -y install software-properties-common htop unzip vorbis-tools apache2 jq nano g++ libsigc++-2.0-dev libgsm1-dev libpopt-dev tcl-dev libgcrypt11-dev libspeex-dev libasound2-dev  alsa-utils git cmake libgpiod-dev gpiod
 apt -y install php libapache2-mod-php ntpdate 
 apt -y install make cmake groff gzip doxygen tar git 
 apt -y install libsigc++ tcl libgcrypt-dev libasound-dev libspeex-dev librtlsdr-dev libpopt-dev libgsm1-dev  
