@@ -466,7 +466,7 @@ proc reject_outgoing_connection {call} {
 #
 proc is_receiving {rx call} {
   if {$rx == 0} {
-    playTone 1000 100 100;
+  #  playTone 1000 100 100;
   }
 }
 
